@@ -1,0 +1,120 @@
+eleitores = int(input('Digite o numero de eleitores: '))
+print(30* "=") 
+print('1. Vincent Vega')
+print('2. Jules Winnfield')
+print('3. Marsellus Wallace')
+
+print('Para votar no seu candidato digite seu numero')
+
+lista_vincent = []
+lista_Jules = []
+lista_Marsellus = []
+print(30*"-")
+i = 1
+
+while i <= eleitores:
+  voto = int(input('Digite o numero do seu candidato: '))
+  if voto == 1:
+    print('Voce votou em Vincent Vega')
+    lista_vincent.append(voto)
+  elif voto == 2:
+    print('Voce votou em Jules Winnfield')
+    lista_Jules.append(voto)
+  elif voto == 3:
+    print('Voce votou em Marsellus Wallace ')
+    lista_Marsellus.append(voto)
+  else:
+      print(' ')
+  i += 1
+print(30*'-')
+porcen_vincent = 0
+porcen_Marsellus = 0
+porcen_Jules = 0
+
+total_de_votos = len(lista_Jules) + len(lista_Marsellus) + len(lista_vincent)
+
+porcen_vincent = (len(lista_vincent) / total_de_votos)*100
+porcen_Marsellus = (len(lista_Marsellus) / total_de_votos)*100
+porcen_Jules = (len(lista_Jules) / total_de_votos)*100
+print(porcen_vincent)
+print(porcen_Marsellus)
+print(porcen_Jules)
+
+if porcen_Jules > porcen_Marsellus and porcen_Jules > porcen_vincent:
+  print(f"mais votado foi o  Jules Winnfield com {porcen_Jules}%")
+elif porcen_Marsellus > porcen_Jules and porcen_Marsellus > porcen_vincent:
+  print(f"mais votado foi o  Marsellus Wallace com {porcen_Marsellus}%")
+elif  porcen_vincent > porcen_Marsellus and porcen_vincent > porcen_Jules:
+   print(f"mais votado foi o Vincent Vega com {porcen_vincent}%")
+else:
+  print('Ocorreu um empate')
+eleitores = int(input('Digite o número de eleitores: '))
+
+print('1. Vincent Vega')
+print('2. Jules Winnfield')
+print('3. Marsellus Wallace')
+print('Para votar no seu candidato, digite o número correspondente')
+
+lista_vincent = []
+lista_Jules = []
+lista_Marsellus = []
+
+print(30 * "-")
+
+a = 0
+while a < 5:
+    c = 1
+    while c <= eleitores:
+        voto = int(input('Digite o número do seu candidato: '))
+
+        if voto == 1:
+            print('Você votou em Vincent Vega')
+            lista_vincent.append(voto)
+            print(30 * "-")
+        elif voto == 2:
+            print('Você votou em Jules Winnfield')
+            lista_Jules.append(voto)
+            print(30 * "-")
+        elif voto == 3:
+            print('Você votou em Marsellus Wallace')
+            lista_Marsellus.append(voto)
+            print(30 * "-")
+        else:
+            print('Número inválido')
+            break
+
+        c += 1
+    else:
+        break
+
+    a += 1
+
+total_de_votos = len(lista_Jules) + len(lista_Marsellus) + len(lista_vincent)
+
+
+porcen_vincent = (len(lista_vincent) / total_de_votos) * 100
+porcen_Marsellus = (len(lista_Marsellus) / total_de_votos) * 100
+porcen_Jules = (len(lista_Jules) / total_de_votos) * 100
+
+#print(porcen_vincent)
+#print(porcen_Marsellus)
+#print(porcen_Jules)
+
+if porcen_vincent > porcen_Marsellus and porcen_vincent > porcen_Jules:
+    print(f"O mais votado foi Vincent Vega com {porcen_vincent}%")
+elif porcen_Jules > porcen_Marsellus and porcen_Jules > porcen_vincent:
+    print(f"O mais votado foi Jules Winnfield com {porcen_Jules}%")
+elif porcen_Marsellus > porcen_Jules and porcen_Marsellus > porcen_vincent:
+    print(f"O mais votado foi Marsellus Wallace com {porcen_Marsellus}%")
+
+else:
+    print('-=-=-= Ocorreu um empate -=-=-=')
+
+
+
+print(30*'-')
+print(f'Candidato             Votos     %')
+
+print(f' Vincent Vega                   {len(lista_vincent)} ---- {porcen_vincent}')
+print(f' Jules Winnfield                {len(lista_Jules)} ---- {porcen_Jules}')
+print(f' Marsellus Wallace              {len(lista_Marsellus)} ---- {porcen_Marsellus}')
